@@ -1,0 +1,65 @@
+/* Remove scrollbars and prevent overflow */
+body,
+html {
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Voiceflow widget container fixes */
+.vfrc-widget,
+.vfrc-chat,
+.vfrc-chat-window {
+    overflow: hidden !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Chat messages container */
+.vfrc-chat-messages,
+.vfrc-system-response,
+.vfrc-chat-dialog {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: calc(100vh - 80px) !important;
+}
+
+/* Fix input field background */
+.vfrc-proactive-prompt__input,
+.vfrc-chat-input input,
+.vfrc-chat-input textarea,
+input[type="text"],
+textarea {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Ensure input container is visible */
+.vfrc-chat-input,
+.vfrc-footer,
+.vfrc-chat-input__container {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+
+    .vfrc-chat-input,
+    .vfrc-footer {
+        position: sticky !important;
+        bottom: 0 !important;
+        z-index: 1000 !important;
+    }
+
+    .vfrc-chat-input input,
+    .vfrc-chat-input textarea {
+        background-color: white !important;
+        border: 1px solid #ddd !important;
+        border-radius: 15px !important;
+        padding: 12px !important;
+    }
+}

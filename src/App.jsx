@@ -10,6 +10,7 @@ function App() {
           verify: { projectID: '68733b6e380ab07f195c1ece' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
+          autostart: true,
           voice: {
             url: "https://runtime-api.voiceflow.com"
           },
